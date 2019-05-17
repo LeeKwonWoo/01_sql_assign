@@ -1,16 +1,37 @@
 -- 실습 14)
 
-SELECT *
+SELECT e.empno
+     , e.ename
+     , e.job
+     , e.mgr
+     , e.hiredate
+     , e.sal
+     , e.comm
+     , e.deptno
   FROM emp e
  WHERE e.comm != 0
 ;
 
-SELECT *
+SELECT e.empno
+     , e.ename
+     , e.job
+     , e.mgr
+     , e.hiredate
+     , e.sal
+     , e.comm
+     , e.deptno
   FROM emp e
  WHERE e.comm <> 0
 ;
 
-SELECT *
+SELECT e.empno
+     , e.ename
+     , e.job
+     , e.mgr
+     , e.hiredate
+     , e.sal
+     , e.comm
+     , e.deptno
   FROM emp e
  WHERE not e.comm = 0
 ;
@@ -24,7 +45,14 @@ EMPNO,  ENAME,  JOB,        MGR,    HIREDATE,   SAL,    COMM,  DEPTNO
 */
 
 --실습 15)
-SELECT *
+SELECT e.empno
+     , e.ename
+     , e.job
+     , e.mgr
+     , e.hiredate
+     , e.sal
+     , e.comm
+     , e.deptno
   FROM emp e
  WHERE e.comm IS NOT NULL
 ;
@@ -39,7 +67,14 @@ EMPNO,  ENAME,  JOB,        MGR,    HIREDATE,   SAL,    COMM,  DEPTNO
 */
 
 -- 실습 16)
-SELECT *
+SELECT e.empno
+     , e.ename
+     , e.job
+     , e.mgr
+     , e.hiredate
+     , e.sal
+     , e.comm
+     , e.deptno
   FROM emp e
  WHERE e.deptno = 20
    AND e.sal > 2500
@@ -53,7 +88,14 @@ EMPNO,  ENAME,  JOB,    MGR,    HIREDATE,   SAL, COMM,  DEPTNO
 */
 
 -- 실습 17)
-SELECT *
+SELECT e.empno
+     , e.ename
+     , e.job
+     , e.mgr
+     , e.hiredate
+     , e.sal
+     , e.comm
+     , e.deptno
   FROM emp e
  WHERE e.job = 'MANAGER'
    AND e.deptno = 10
@@ -66,7 +108,14 @@ EMPNO,  ENAME,  JOB,    MGR,    HIREDATE,   SAL, COMM,  DEPTNO
 */
 
 -- 실습 18)
-SELECT *
+SELECT e.empno
+     , e.ename
+     , e.job
+     , e.mgr
+     , e.hiredate
+     , e.sal
+     , e.comm
+     , e.deptno
   FROM emp e
  WHERE e.job in ('MANAGER','CLERK','SALESMAN')
 ;
@@ -87,7 +136,14 @@ EMPNO,  ENAME,  JOB,        MGR,    HIREDATE,   SAL,    COMM,   DEPTNO
 */
 
 -- 실습 19)
-SELECT *
+SELECT e.empno
+     , e.ename
+     , e.job
+     , e.mgr
+     , e.hiredate
+     , e.sal
+     , e.comm
+     , e.deptno
   FROM emp e
  WHERE e.ename LIKE 'A%'
 ;
@@ -99,7 +155,14 @@ EMPNO,  ENAME,  JOB,        MGR,    HIREDATE,   SAL,    COMM, DEPTNO
 */
 
 -- 실습 20)
-SELECT *
+SELECT e.empno
+     , e.ename
+     , e.job
+     , e.mgr
+     , e.hiredate
+     , e.sal
+     , e.comm
+     , e.deptno
   FROM emp e
  WHERE e.ename LIKE '%A%'
 ;
@@ -117,7 +180,14 @@ EMPNO,  ENAME,  JOB,        MGR,    HIREDATE,   SAL,    COMM, DEPTNO
 
 -- 실습 21)
 
-SELECT *
+SELECT e.empno
+     , e.ename
+     , e.job
+     , e.mgr
+     , e.hiredate
+     , e.sal
+     , e.comm
+     , e.deptno
   FROM emp e
  WHERE e.ename LIKE '%S'
 ;
@@ -130,7 +200,14 @@ EMPNO,  ENAME,  JOB,    MGR,    HIREDATE,   SAL, COMM,  DEPTNO
 */
 
 -- 실습 22)
-SELECT *
+SELECT e.empno
+     , e.ename
+     , e.job
+     , e.mgr
+     , e.hiredate
+     , e.sal
+     , e.comm
+     , e.deptno
   FROM emp e
  WHERE e.ename LIKE '%E_'
 ;
@@ -141,13 +218,19 @@ EMPNO,  ENAME,  JOB,        MGR,    HIREDATE,   SAL,    COMM, DEPTNO
 7499	ALLEN	SALESMAN	7698	81/02/20	1600	300	    30
 7566	JONES	MANAGER	    7839	81/04/02	2975		    20
 7844	TURNER	SALESMAN	7698	81/09/08	1500	0	    30
-7900	JAMES	CLERK	    7698	81/12/03	950		30
-7934	MILLER	CLERK	    7782	82/01/23	1300		    10
+7900	JAMES	CLERK	    7698	81/12/03	950		        30
+7934	MILLER	CLERK	    7782	82/01/23	1300		    10				
 */
 
 -- 실습 23)
-SELECT *
-  FROM emp e
+SELECT e.empno
+     , e.ename
+     , e.job
+     , e.mgr
+     , e.hiredate
+     , e.sal
+     , e.comm
+     , e.deptno  FROM emp e
  WHERE  e.sal BETWEEN 2500 AND 3000
 ;
 
@@ -160,7 +243,14 @@ EMPNO,  ENAME,  JOB,    MGR,    HIREDATE,   SAL, COMM, DEPTNO
 */
 
 -- 실습 24)
-SELECT *
+SELECT e.empno
+     , e.ename
+     , e.job
+     , e.mgr
+     , e.hiredate
+     , e.sal
+     , e.comm
+     , e.deptno
   FROM emp e
  WHERE e.comm IS NULL
 ;
@@ -180,7 +270,14 @@ EMPNO,  ENAME,  JOB,        MGR,    HIREDATE,   SAL, COMM, DEPTNO
 
 -- 실습 25)
 
-SELECT *
+SELECT e.empno
+     , e.ename
+     , e.job
+     , e.mgr
+     , e.hiredate
+     , e.sal
+     , e.comm
+     , e.deptno
   FROM emp e
  WHERE e.comm IS NOT NULL
 ;
@@ -227,92 +324,3 @@ SELECT e.empno 사번
 
 
 
--- 실습 01)
-SELECT INITCAP(e.ename)
-  FROM emp e
-;
-
-/*
-INITCAP(E.ENAME)
-----------------
-Smith
-Allen
-Ward
-Jones
-Martin
-Blake
-Clark
-King
-Turner
-James
-Ford
-Miller
-J_James
-J%James
-*/
-
--- 실습 2)
-SELECT LOWER(e.ename)
-  FROM emp e
-;
-
-/*
-LOWER(E.ENAME)
---------------
-smith
-allen
-ward
-jones
-martin
-blake
-clark
-king
-turner
-james
-ford
-miller
-j_james
-j%james
-*/
-
-
--- 실습 3)
-SELECT INITCAP(e.ename)
-  FROM emp e
-;
-
-/*
-INITCAP(E.ENAME)
-----------------
-Smith
-Allen
-Ward
-Jones
-Martin
-Blake
-Clark
-King
-Turner
-James
-Ford
-Miller
-J_James
-J%James
-*/
-
-
---실습 4)
-SELECT LENGTH('korea')
-  FROM dual
-;
-
-/*
-LENGTH('KOREA')
----------------
-5
-*/
-
---실습 5)
-SELECT CHAR_LENGTH('korea')
-  FROM dual
-;
