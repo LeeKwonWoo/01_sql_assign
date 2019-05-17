@@ -76,7 +76,8 @@ J%James
 SELECT LENGTH('korea')
   FROM dual
 ;
-SELECT LENGTH('korea')
+
+SELECT LENGTHB('korea')
   FROM dual
 ;
 
@@ -87,6 +88,11 @@ LENGTH('KOREA')
 */
 
 --½Ç½À 5)
-SELECT 'LeeKwonWoo'
+SELECT 'LeeKwonWoo' AS MyName
   FROM dual
 ;
+/*
+MYNAME
+----------
+LeeKwonWoo
+*/
