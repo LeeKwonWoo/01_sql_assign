@@ -88,13 +88,25 @@ LENGTH('KOREA')
 */
 
 --실습 5)
-SELECT 'LeeKwonWoo' AS MyName
+
+SELECT INITCAP('LeeKwonWoo') AS MyName
   FROM dual
 ;
+
 /*
 MYNAME
 ----------
-LeeKwonWoo
+Leekwonwoo
+*/
+
+SELECT LOWER('LeeKwonWoo') AS MyName
+  FROM dual
+;
+
+/*
+MYNAME
+----------
+leekwonwoo
 */
 
 -- 실습 6)
@@ -178,17 +190,20 @@ SELECT e.empno
      , e.ename
      , NVL(e.comm,0)
   FROM emp e
- WHERE e.comm IS NULL
 ;
 
 /*
 EMPNO,  ENAME,  NVL(E.COMM,0)
 ---------------------------
 7369	SMITH	0
+7499	ALLEN	300
+7521	WARD	500
 7566	JONES	0
+7654	MARTIN	1400
 7698	BLAKE	0
 7782	CLARK	0
 7839	KING	0
+7844	TURNER	0
 7900	JAMES	0
 7902	FORD	0
 7934	MILLER	0
@@ -198,7 +213,27 @@ EMPNO,  ENAME,  NVL(E.COMM,0)
 -- 실습 14)
 SELECT e.empno
      , e.ename
-     , NVL(e.comm,e.sal+e.comm)
+     , NVL(e.sal+e.comm,e.sal)
   FROM emp e
- WHERE e.comm IS NULL
 ;
+
+/*
+EMPNO,  ENAME,  NVL(E.SAL+E.COMM,E.SAL)
+---------------------------------------
+7369	SMITH	800
+7499	ALLEN	1900
+7521	WARD	1750
+7566	JONES	2975
+7654	MARTIN	2650
+7698	BLAKE	2850
+7782	CLARK	2450
+7839	KING	5000
+7844	TURNER	1500
+7900	JAMES	950
+7902	FORD	3000
+7934	MILLER	1300
+9999	J_JAMES	
+8888	J%JAMES	
+*/
+
+--실습 15)
