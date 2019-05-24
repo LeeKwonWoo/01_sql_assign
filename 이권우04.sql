@@ -213,6 +213,7 @@ EMPNO,  ENAME,  NVL(E.COMM,0)
 -- 실습 14)
 SELECT e.empno
      , e.ename
+     , e.sal
      , NVL(e.sal+e.comm,e.sal)
   FROM emp e
 ;
@@ -235,5 +236,3 @@ EMPNO,  ENAME,  NVL(E.SAL+E.COMM,E.SAL)
 9999	J_JAMES	
 8888	J%JAMES	
 */
-
---실습 15)
