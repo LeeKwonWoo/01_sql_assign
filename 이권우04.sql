@@ -236,3 +236,37 @@ EMPNO,  ENAME,  NVL(E.SAL+E.COMM,E.SAL)
 9999	J_JAMES	
 8888	J%JAMES	
 */
+
+--(3)단일행 함수- 데이터 타입 변환 as 패턴 6개 조회
+
+-- 실습 15)
+
+SELECT e.empno 사원번호
+     , e.ename 이름
+     , e.sal   급여
+     , to_char(DECODE(e.job, 'CLERK'    ,300
+                   , 'SALESMAN'  ,450
+                   , 'MANAGER'  ,600
+                   , 'ANALYST'  ,800
+                   , 'PRESIDENT',1000),'$9999') "자기개발비"
+  FROM emp e
+;
+
+/*
+사원번호, 이름,  급여, 자기개발비
+--------------------------------
+7369	  SMITH	 800	  $300.00
+7499	  ALLEN	 1600	  $450.00
+7521	  WARD	 1250	  $450.00
+7566	  JONES	 2975	  $600.00
+7654	  MARTIN 1250	  $450.00
+7698	  BLAKE	 2850	  $600.00
+7782	  CLARK	 2450	  $600.00
+7839	  KING	 5000	  $1000.00
+7844	  TURNER 1500	  $450.00
+7900	  JAMES	 950	  $300.00
+7902	  FORD	 3000	  $800.00
+7934	  MILLER 1300	  $300.00
+9999	  J_JAMES		  $300.00
+8888	  J%JAMES		  $300.00
+*/
